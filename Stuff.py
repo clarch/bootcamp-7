@@ -1,17 +1,21 @@
 
-# print list(map(int, str(234567)))
-# print dict(1="boyr", 2="you")
-
-def add(a, b):
-	""" sometin cool
+def funky(a, b):
+	""" 
 	"""
-	# import pdb; pdb.set_trace()
-	# if type(a) == int and type(b) == int:
-	# 	print (a + b)
-	# else:
-	# 	print ("Invalid input")
-	print a + b
+	if isinstance(a, dict) and isinstance(b, dict):
+		print dict(a.items() + b.items())
 
-add(1,5)
-add('1','5')
-add(1.1,5.6)
+	elif (type(a) == type(b)) or ((type(a) == int and type(b) == float) or (type(a) == float and type(b) == int)):
+		print a + b
+	else:
+		print 'Type Error, cannot concatenate'
+
+c= 2
+d = [3.4]
+e = {1:'today',}
+f = {2:'tommorrow'}
+
+funky (c,d)
+funky (e,f)
+funky (c,f)
+
