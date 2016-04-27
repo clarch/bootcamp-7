@@ -1,21 +1,20 @@
-def sum_of_digits(A):
-	'''
-		Takes a list A, and returns the sum of all 
-		digits in the list e.g. [10, 20,45] should
-		return 1 + 0 + 2 + 0 + 4 + 5 = 12
-	'''
-	total = 0
-	base = 10
-	newlist = []
+def funky(a, b):
+	""" 
+	"""
+	if isinstance(a, dict) and isinstance(b, dict):
+		print dict(a.items() + b.items())
 
-	for a in A:
-		while a > 0:		
-			newlist.append(a % base)
-			a //= base
-	for b in newlist:
-		total += b
-	return total
+	elif isinstance(a, (list, str)) and isinstance(b, (list, str)
+		print a + b
+		
+	else:
+		print 'Type Error, cannot concatenate'
 
+c= 2
+d = [3.4]
+e = {1:'today',}
+f = {2:'tommorrow'}
 
-
-print sum_of_digits([10, 20,45])
+funky (c,d)
+funky (e,f)
+funky (c,f)
