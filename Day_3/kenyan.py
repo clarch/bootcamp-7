@@ -1,6 +1,8 @@
 import person
 
 class Kenyan(person.Person):
+	corrupt = False
+
 	def probe(self, corrupt):
 		self.corrupt = corrupt
 
