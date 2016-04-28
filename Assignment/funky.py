@@ -1,6 +1,7 @@
 def funky(a, b):
 	""" 
 	"""
+	list = (int, long, str, )
 	if isinstance(a, dict) and isinstance(b, dict):
 		print dict(a.items() + b.items())
 
