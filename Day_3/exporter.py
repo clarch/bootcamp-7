@@ -18,9 +18,22 @@ def max_min(A):
 	# return max(A) - min(A)
 	max_, min_ = A[0], A[0]
 
-	for a in A:
-		if a>max_:
-			max_=a
-		elif a>min_:
-			min_=a
-	return max_ - min_
+def find_max_min(Arr):
+  max_, min_ = Arr[0], Arr[0]
+  
+  Min_Max = []
+  for arr in Arr:
+    if arr < min_:
+      min_ = arr
+    elif arr > max_:
+      max_ = arr
+  
+  if min_ == max_:
+    Min_Max.append(len(Arr))
+    return Min_Max
+  else:
+  	Min_Max.append(min_)
+  	Min_Max.append(max_)
+  	return Min_Max
+
+print find_max_min([4, 4, 4, 4, 4])
