@@ -13,13 +13,24 @@ class Poacher(Person):
 		Person.__init__(self, name, age, **kwargs)
 		self.gun = kwargs.get('gun', 'AK-47')
 		self.loc = kwargs.get('loc', 'Nairobi')
-		self.game = kwargs.get('game_park', 'Mombasa')
+		self.game_park = kwargs.get('game_park', 'Mombasa')
 		self.fav = kwargs.get('fav', 'Elephant')
+
+		# print "Args",
+		# args
+
+		# # for args
+		# if args[0]:
+		# 	self.loc = args[0]
+		# if args[1]:
+		# 	self.gun = args[1]
 
 class Tourist(object):
 	pass
 
 p = Person('Jane', 23)
-pc = Poacher('Joe', 45, gun='riffle')
+pc = Poacher('Joe', 45, gun='riffle', game_park='NNP', loc='Mombasa')
+pc = Poacher('Chris', 45, gun='colt', game_park='wha', loc='Bonoko')
+
 
 
